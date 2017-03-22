@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
 
-    "name": "Getting started example",
-    "description": "This extension shows a Google Image search result for the current page",
+    "name": "PasswordManager",
+    "description": "a password creator and autofiller extension",
     "version": "1.0",
 
     "browser_action": {
@@ -10,10 +10,10 @@
         "default_popup": "popup.html",
         "default_title": "Click here!"
     },
-    "permissions": [
-        "activeTab",
-        "https://ajax.googleapis.com/"
-    ]
-
+    "permissions": ["activeTab", "http://*/*", "https://*/*"], // apply to every "http://*/*" & "https://*/*"
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["jquery-1.6.4.min.js"] // apply jquery to "http://*/*" & "https://*/*"
+    }]
 
 }
