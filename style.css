@@ -25,3 +25,10 @@
 #content {
     text-align: left;
 }
+
+#user .usero {
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: right;
+    font-size: 50%;
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+    <script type="text/javascript" charset="utf-8" src="signup.js"></script>
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <div class="content ">
+
+
+        <!--  登录面板    -->
+        <div class="panel ">
+
+            <!--  账号和密码组    -->
+            <div class="group ">
+                <labe id="username" l>username</label>
+                    <input placeholder="please enter the username ">
+
+            </div>
+            <div class="group ">
+                <label id="password">password</label>
+                <input placeholder="please enter the password " type="password ">
+                <br>
+                <label id="rntPassword">re-enter password</label>
+                <input placeholder="please re-enter the password " type="password ">
+            </div>
+
+            <!--  登录按钮    -->
+            <div class="login ">
+                <button id="loginBtn" type="button" onclick="javascript:login()">login</button>
+            </div>
+        </div>
+
+
+        <!--  注册按钮    -->
+        <div class="register ">
+            <button id="registerBtn" type="button" onclick="javascript:register()">register</button>
+        </div>
+
+    </div>
+</body>
+
+</html>
