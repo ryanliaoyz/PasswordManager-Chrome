@@ -17,11 +17,15 @@ login.onclick = function() {
         success: function(data) {
             if (data.rows.length > 0) {
                 if (data.rows[0].userPass == userPass) {
-                    window.location.href = "sucess";
+                    window.location.href = "success";
                 } else {
                     document.getElementById("username").focus;
+                    alert("the username and password you entered do not correspond.");
                     return;
                 }
+            } else {
+                alert("enter a valid username");
+                return;
             }
         }
     });
