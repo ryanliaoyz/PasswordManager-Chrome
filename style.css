@@ -1,4 +1,27 @@
-#generator {
+* {
     font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-    font-size: 150%;
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: center;
+}
+
+#generator {
+    font-size: 100%;
+}
+
+#OptionContent {
+    font-size: 200%;
+}
+
+#optionLength {
+    width: 10%;
+}
+
+#optionLength {
+    margin: 0px;
+    display: inline;
+}
+
+#content {
+    text-align: left;
 }
