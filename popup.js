@@ -29,9 +29,19 @@
 
 var generator = document.getElementById("generator");
 
+var rand = function(min, max) {
+    return Math.floor(Math.max(min, Math.random() * (max + 1)));
+}
+
 generator.onclick = function() {
     var pw = '';
-    var len = document.getElementById("optionLength").value;
+    var len = 0;
+    if (document.getElementById("optionLengthRandom").checked) {
+        len = rand(6, 20);
+    } else {
+        len = document.getElementById("optionLength").value;
+    }
+
     if (len < 4) {
         pw = 'The length must be over 4';
         document.getElementById("PasswordDisplay").value = pw;
@@ -42,13 +52,12 @@ generator.onclick = function() {
     var special = ['~!@#$%^&*()_+";",./?<>'];
     var uppercase = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
     var lowercase = ['abcdefghijklmnopqrstuvwxyz'];
-    var count;
+    // var count;
     if (document.getElementById("OptionLowercase").checked) {
         var text = text + lowercase;
     }
     if (document.getElementById("OptionUppercase").checked) {
         var text = text + uppercase;
-        0
     }
     if (document.getElementById("OptionNumber").checked) {
         var text = text + number;
@@ -56,7 +65,7 @@ generator.onclick = function() {
     if (document.getElementById("OptionSpecial").checked) {
         var text = text + special;
     }
-    var rand = function(min, max) { return Math.floor(Math.max(min, Math.random() * (max + 1))); }
+    ///
     for (i = 0; i < len; ++i) {
         pw += text.charAt(rand(0, text.length));
     }
