@@ -45,38 +45,68 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
+
+
+
 <body>
-    <div class="user" id="usero">
-        <a href="./login.html">login</a>
-        <a href="./signup.html">register</a>
-    </div>
+    <div id="tab">
+        <div class="tabList">
+            <ul>
+                <li class="cur">generator</li>
+                <li>storage</li>
+                <li>setting</li>
+            </ul>
+        </div>
+        <div class="tabCon">
+            <div class="cur">
+                <table>
+                    <tr>
+                        <td class="form1" id="WholeForm">
+                            <table>
+                                <tr>
+                                    <td class="option">
+                                        <label class="label1" id="OptionContent">content:</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="OptionLowercase" id="OptionLowercase" checked="checked"><label for="OptionLowercase" id="UseLowercase">Lowercase letters</label><br>
+                                        <input type="checkbox" name="OptionUppercase" id="OptionUppercase" checked="checked"><label for="OptionUppercase" id="UseUppercase">Uppercase letters</label><br>
+                                        <input type="checkbox" name="OptionNumber" id="OptionNumber" checked="checked"><label for="OptionNumber" id="UseNumber">Numbers</label><br>
+                                        <input type="checkbox" name="OptionSpecial" id="OptionSpecial" checked="checked"><label for="OptionSpecial" id="UseSpecial">Special character</label><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="option">
+                                        <label class="label2" id="optLength">length:</label>
+                                        <input type="text" name="optionLength" id="optionLength" value="">
+                                        <input type="checkbox" name="optionLengthRandom" id="optionLengthRandom"><label for="optionLengthRandom" id="optLengthRandom">random</label><br>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button id="generator">Generate Password</button>
+                            <input id="PasswordDisplay" type="text" name="PasswordDisplay" readonly>
+                        </td>
+                    </tr>
+                </table>
 
-    <td class="form1" id="WholeForm">
-        <td class="option">
-            <td class="label1" id="OptionContent">content:</td>
-            <div id="content">
-                <input type="checkbox" name="OptionLowercase" id="OptionLowercase" checked="checked"><label for="OptionLowercase" id="UseLowercase">Lowercase letters</label><br>
-                <input type="checkbox" name="OptionUppercase" id="OptionUppercase" checked="checked"><label for="OptionUppercase" id="UseUppercase">Uppercase letters</label><br>
-                <input type="checkbox" name="OptionNumber" id="OptionNumber" checked="checked"><label for="OptionNumber" id="UseNumber">Numbers</label><br>
-                <input type="checkbox" name="OptionSpecial" id="OptionSpecial" checked="checked"><label for="OptionSpecial" id="UseSpecial">Special character</label><br>
             </div>
-        </td>
-
-        <br>
-
-        <td class="label2" id="optLength">length:</td>
-        <td class="option">
-            <input type="text" name="optionLength" id="optionLength" value="">
-            <input type="checkbox" name="optionLengthRandom" id="optionLengthRandom"><label for="optionLengthRandom" id="optLengthRandom">random</label><br>
-        </td>
-    </td>
-    <button id="generator">Generate Password</button>
-    <tr>
-        <td>
-            <input id="PasswordDisplay" type="text" name="PasswordDisplay" readonly>
-        </td>
-    </tr>
+            <div>
+                <h1>storage goes over here</h1>
+            </div>
+            <div>
+                <h1>settings goes over here</h1>
+            </div>
+        </div>
+    </div>
 </body>
+
+
+
 <script type="text/javascript" charset="utf-8" src="popup.js"></script>
 
 </html>

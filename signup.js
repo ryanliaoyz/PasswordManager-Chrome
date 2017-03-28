@@ -17,18 +17,18 @@ register.onclick = function() {
         return;
     } else {
         $.ajax({
-            url: "http://code.itotem.org/code/demo/iow9skv8/pw/user/queryby/userName/is/" + userName,
-            // data: { userLogin: $("#userLogin").val() },
-            // dataType: "jsonp",
+            url: "http://code.itotem.org/code/demo/iow9skv8/pw/user/update",
+            data: {
+                userName: userName,
+                userPass: userPass
+            },
             type: "post",
             success: function(data) {
-                if (data.rows.length > 0) {
-                    if (data.rows[0].userPass == userPass) {
-                        window.location.href = "success";
-                    } else {
-                        document.getElementById("username").focus;
-                        return;
-                    }
+                if (data.result) {
+                    window.location.href = 'popup.html';
+                } else {
+                    alert("invalid username, try again");
+                    return;
                 }
             }
         });

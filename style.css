@@ -2,7 +2,7 @@
     font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
     margin: 0 auto;
     padding: 0 auto;
-    text-align: center;
+    text-align: left;
 }
 
 #generator {
@@ -26,9 +26,72 @@
     text-align: left;
 }
 
+.option {
+    text-align: left;
+}
+
 #user .usero {
     margin: 0 auto;
     padding: 0 auto;
     text-align: right;
     font-size: 50%;
+}
+
+body {
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    width: 360px;
+    height: 230px;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+#tab {
+    position: relative;
+}
+
+#tab ul li {
+    float: left;
+    background: #fefefe;
+    background: -moz-linear-gradient(top, #fefefe, #ededed);
+    background: -o-linear-gradient(left top, left bottom, from(#fefefe), to(#ededed));
+    background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#ededed));
+    border: 1px solid #ccc;
+    padding: 5px 0;
+    width: 100px;
+    text-align: center;
+    margin-left: -1px;
+    position: relative;
+    cursor: pointer;
+}
+
+#tab .tabCon {
+    position: absolute;
+    left: -1px;
+    top: 32px;
+    border: 1px solid #ccc;
+    border-top: none;
+    margin-left: 40px;
+    width: 301px;
+    height: 190px;
+}
+
+#tab .tabCon div {
+    padding: 1px;
+    position: absolute;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#tab .tabList li.cur {
+    border-bottom: none;
+    background: #fff;
+}
+
+#tab .tabCon div.cur {
+    opacity: 1;
+    filter: alpha(opacity=100);
 }

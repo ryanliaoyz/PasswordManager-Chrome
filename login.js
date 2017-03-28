@@ -17,7 +17,7 @@ login.onclick = function() {
         success: function(data) {
             if (data.rows.length > 0) {
                 if (data.rows[0].userPass == userPass) {
-                    window.location.href = "success";
+                    window.location.href = "popup.html";
                 } else {
                     document.getElementById("username").focus;
                     alert("the username and password you entered do not correspond.");
